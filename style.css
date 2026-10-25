@@ -1,0 +1,30 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 16px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #eef1f9; color: #1b2130;
+}
+.quiz {
+  width: min(560px, 100%); background: #fff; padding: 28px; border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(20, 30, 60, .12);
+}
+h1 { margin: 0 0 16px; font-size: 1.5rem; text-align: center; color: #3b5bdb; }
+h2 { font-size: 1.2rem; line-height: 1.4; }
+.progress { display: flex; justify-content: space-between; color: #5b6577; font-size: .9rem; }
+.options { display: grid; gap: 10px; margin: 16px 0; }
+.option {
+  text-align: left; padding: 12px 14px; font-size: 1rem; border-radius: 10px; cursor: pointer;
+  border: 2px solid #dde2ec; background: #fff; color: inherit;
+}
+.option:hover:not(:disabled) { border-color: #3b5bdb; }
+.option:disabled { cursor: default; }
+.option.correct { border-color: #2f9e44; background: #e6f6ea; }
+.option.wrong { border-color: #e03131; background: #fdeaea; }
+.feedback { min-height: 1.5em; font-weight: 600; }
+.next {
+  padding: 10px 22px; border: 0; border-radius: 10px; background: #3b5bdb; color: #fff;
+  font-size: 1rem; cursor: pointer;
+}
+.next:hover { background: #2f4bc0; }
+.final { font-size: 2rem; font-weight: 700; margin: 8px 0; }
+[hidden] { display: none !important; }
